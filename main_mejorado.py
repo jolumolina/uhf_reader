@@ -110,7 +110,7 @@ def leer_tid_por_epc(epc_hex):
         # Aceptar cualquier respuesta positiva (True, 'Select sucessfull', etc.)
         if not sel:
             return 'No se pudo seleccionar la etiqueta'
-        tid = uhf.Read_tag_data('2')
+        tid = uhf.Read_tag_data('2')  # Banco TID
         return tid or 'No data'
     except Exception as e:
         return f"Error al leer TID: {e}"
